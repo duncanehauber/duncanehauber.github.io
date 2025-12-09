@@ -2,12 +2,64 @@
 <html>
 
 <head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>About Me</title>
+	<style>
+	header {
+		background-color: rgb(181, 181, 181);
+		padding: 10px;
+		text-align: center;
+	}
+	body {
+		background-color: slateblue;
+	}
+	h1 {
+		color: white;
+		font-family: 'Courier New', Courier, monospace;
+		text-align: left;
+	}
+	ul.topnav {
+		display: flex;
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		background-color: #000000;
+	}
+
+	/* Style links in topnav */
+	ul.topnav li a {
+		display: block;
+		color: #ffffff;
+		padding: 14px 16px;
+		text-decoration: none;
+	}
+
+	/* Change color on hover */
+	ul.topnav li a:hover {
+		background-color: #dddddd;
+		color: rgb(0, 0, 0);
+	}
+
+	div.flex-container {
+		display: flex;
+		flex-direction: row;
+	}
+
+	div.flex-container > div {
+  	margin: 10px;
+	}
+
+	@media screen and (max-width:600px) {
+		div.flex-container {
+			flex-direction: column;
+		}
+	}
+	</style>
 </head>
 
 <body>
   <nav>
-    <ul>
+    <ul class="topnav">
       <li><a href="./index.html"> Home </a></li>
   	  <li><a href="./aboutme.html"> About Me </a></li>
   	  <li><a href="./cv.html"> CV </a></li>
@@ -16,8 +68,12 @@
     </ul>
   </nav>
   <div>
+	<header>
   	<h1>About Me</h1>
+	</header>
   </div>
+
+	<div class="flex-container">
 	<div>
 		<ul>
 			<li><a href="#Background">Background</a></li>
@@ -25,19 +81,14 @@
 			<li><a href="#Plans">Future Plans</a></li>
 		</ul>
 	</div>
-	<div>
-		<img src="../pyramids.jpg" alt="wide shot of pyramids of giza" width="640" height="480">
-	</div>
 	<div id="Background">
 		<h2> Background </h2>
 			<ul>
 				<li>21 years old</li>
-				<li>Lived in Singapore and Philippines</li>
+				<li>Grew up in Singapore and Philippines</li>
+				<li>5th to 12th grade in greater Bostern area</li>
 				<li>Visited 40+ countries and 30 states</li>
 			</ul>
-	</div>
-	<div>
-		<img src="../poppyandluna.jpg" alt="cat in a bag staring back at a dog" width="640" height="480">
 	</div>
 	<div id="Interests">
 		<h2> Interests </h2>
@@ -49,11 +100,9 @@
 				<li>Music</li>
 			</ul>
 	</div>
-	<div>
-		<img src="../cathedral.jpg" alt="canted view looking up at a cathedral and the sky" width="640" height="360">
-	</div>
 	<div id="Plans">
 		<h2>Future Plans</h2>
+		<ul>
 			<li>Graduate with bachelor's degree</li>
 			<li>Learn guitar, bass, drums</li>
 			<li>Create music</li>
@@ -62,7 +111,12 @@
 			<li>Create a series of educational physics simulations</li>
 			<li>Learn Blender (or any other 3d software) if I have the time</li>
 			<li>Create an MP3 player out of a Raspberry Pi</li>
+		</ul>
 	</div>
+	</div>
+	<img src="../pyramids.jpg" alt="wide shot of pyramids of giza" width="640" height="480">
+	<img src="../poppyandluna.jpg" alt="cat in a bag staring back at a dog" width="640" height="480">
+	<img src="../cathedral.jpg" alt="canted view looking up at a cathedral and the sky" width="640" height="360">
 </body>
 
 </html>
