@@ -3,12 +3,51 @@
 
 <head>
 	<title>Writing Pieces</title>
+	<style>
+		header {
+		background-color: black;
+		padding: 10px;
+		text-align: center;
+		color: white;
+		}
+		body {
+			background-color: antiquewhite;
+		}
+
+		h1 {
+			color: white;
+			font-family: 'Courier New', Courier, monospace;
+			text-align: left;
+		}
+		ul.topnav {
+		display: flex;
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		background-color: #000000;
+		}
+
+	/* Style links in topnav */
+	ul.topnav li a {
+		display: block;
+		color: #ffffff;
+		padding: 14px 16px;
+		text-decoration: none;
+		font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+	}
+
+	/* Change color on hover */
+	ul.topnav li a:hover {
+		background-color: #dddddd;
+		color: rgb(0, 0, 0);
+	}
+	</style>
 </head>
 
 <body>
 
   <nav>
-    <ul>
+    <ul class="topnav">
       <li><a href="./index.html"> Home </a></li>
   	  <li><a href="./aboutme.html"> About Me </a></li>
   	  <li><a href="./cv.html"> CV </a></li>
