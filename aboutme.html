@@ -45,6 +45,7 @@
 	div.flex-container {
 		display: flex;
 		flex-direction: row;
+		text-align: center;
 	}
 
 	div.flex-container > div {
@@ -55,6 +56,11 @@
 		div.flex-container {
 			flex-direction: column;
 		}
+	}
+
+	div.centerjustify {
+		display: flex;
+		justify-content: center;
 	}
 	</style>
 </head>
@@ -89,7 +95,7 @@
 			<ul>
 				<li>21 years old</li>
 				<li>Grew up in Singapore and Philippines</li>
-				<li>5th to 12th grade in greater Bostern area</li>
+				<li>5th to 12th grade in greater Boston area</li>
 				<li>Visited 40+ countries and 30 states</li>
 			</ul>
 	</div>
@@ -117,10 +123,12 @@
 		</ul>
 	</div>
 	</div>
+	<div class="centerjustify">
 	<img src="../pyramids.jpg" alt="wide shot of pyramids of giza" width="640" height="480">
 	<img src="../poppyandluna.jpg" alt="cat in a bag staring back at a dog" width="640" height="480">
 	<img src="../cathedral.jpg" alt="canted view looking up at a cathedral and the sky" width="640" height="360">
 	<img src="../derelict.jpg" alt="photo of the side of an abandoned building" width="'640" height="360">
+	</div>
 </body>
 
 </html>
