@@ -61,6 +61,29 @@
 		width: 100%;
   	padding: 20px;
 	}
+
+	.collapsible {
+  background-color: #000000;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  background-color: #555;
+}
+
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: antiquewhite;
+}
 	</style>
 </head>
 
@@ -78,16 +101,34 @@
 	<h1>Artwork</h1>
 </header>
 
-<div class="flex-container">
-<div>
+<button type="button" class="collapsible">Ocean</button>
+<div class="content">
     <div><img src="../blenderrenders.png" alt="Computer renders of coffee and a doughnut" width="360" height="640"></div>
     <p>A long while ago, I watched a tutorial on how to create a doughnut and glass of coffee in Blender. These renders are the results.</p>
 </div>
-<div>
+<button type="button" class="collapsible">Ocean</button>
+<div class="content">
     <div><img src="../drawings.png" alt="Collage of miscellaneous drawings" width="360" height="640"></div>
     <p>A selection of drawings from throughout the years.</p>
 </div>
-</div>
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+</script>
+
 </body>
 
 </html>
