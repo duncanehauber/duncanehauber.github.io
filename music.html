@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Music</title>
+	<style>
+	header {
+		background-color: black;
+		padding: 10px;
+		text-align: center;
+		color: white;
+	}
+	body {
+		background-color: antiquewhite;
+	}
+	h1 {
+		color: white;
+		font-family: 'Courier New', Courier, monospace;
+		text-align: left;
+	}
+	ul.topnav {
+		display: flex;
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		background-color: #000000;
+	}
+
+	/* Style links in topnav */
+	ul.topnav li a {
+		display: block;
+		color: #ffffff;
+		padding: 14px 16px;
+		text-decoration: none;
+		font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+	}
+
+	/* Change color on hover */
+	ul.topnav li a:hover {
+		background-color: #dddddd;
+		color: rgb(0, 0, 0);
+	}
+
+	div.flex-container {
+		display: flex;
+		flex-direction: row;
+	}
+
+	div.flex-container > div {
+  	margin: 10px;
+	}
+
+	@media screen and (max-width:600px) {
+		div.flex-container {
+			flex-direction: column;
+		}
+	}
+
+	div.centerjustify {
+		display: flex;
+		justify-content: center;
+	}
+
+	img {
+		width: 40%;
+	}
+	</style>
+</head>
+
+<body>
+	<nav>
+    <ul class="topnav">
+      <li><a href="./index.html"> Home </a></li>
+  	  <li><a href="./aboutme.html"> About Me </a></li>
+  	  <li><a href="./cv.html"> CV </a></li>
+			<li><a href="./music.html"> Music </a></li>
+			<li><a href="./art.html"> Artwork </a></li>
+			<li><a href="./writings.html"> Writing Pieces </a></li>
+    </ul>
+  </nav>
+  <div>
+	<header>
+  	<h1>Music</h1>
+	</header>
+  </div>
+
+	<div>
+		<ul class="topnav">
+			<li><a href="#Songs">Favorite Songs</a></li>
+			<li><a href="#Artists">Favorite Artists</a></li>
+			<li><a href="#Links">Links</li>
+		</ul>
+	</div>
+
+	<div id="Songs">
+		<h2>Favorite Songs (at the moment)</h2>
+			<ul>
+				<li>Aphasia - Pinegrove</li>
+				<li>Goodbye For Now - Touche Amore ft. Julian Baker</li>
+				<li>Your Deep Rest- The Hotelier</li>
+				<li>introvert - brakence</li>
+				<li>Sleep - Citizen</li>
+				<li>Your Graduation - Modern Baseball</li>
+				<li>The Place Where He Inserted The Blade - Black Country, New Road</li>
+			</ul>
+	</div>
+
+	<div id="Artists">
+		<h2>Favorite Artists (at the moment)</h2>
+			<ul>
+				<li>My Chemical Romance</li>
+				<li>System Of A Down</li>
+				<li>Brand New</li>
+				<li>brakence</li>
+				<li>Modern Baseball</li>
+				<li>Pierce The Veil</li>
+				<li>Bring Me The Horizon</li>
+			</ul>
+	</div>
+
+	<div>
+		<h2 id="Links">Links</h2>
+		<ul>
+			<li><a href="https://open.spotify.com/user/iz8bodadfxn35338mrr5f1x76?si=21159a2d837442d3"> Spotify profile </a></li>
+			<li><a href="https://stats.fm/oobinoobi"> stats.fm profile</a></li>
+		</ul>
+		<h3> Select Playlists </h3>
+		<p>
+			<iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/1Kk57RRBEw2NSorXmTEmba?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+		</p>
+		<p>
+			<iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/0B4QRhZC4MvIZOFEZKxDIF?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+		</p>
+	</div>
+
+</body>
+
+
+</html>
