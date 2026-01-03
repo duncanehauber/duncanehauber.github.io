@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Music</title>
 	<style>
 	header {
@@ -65,6 +65,25 @@
 	img {
 		width: 40%;
 	}
+	.episodes {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .episode {
+      min-width: max-content;
+      margin-bottom: .8rem;
+      padding: .8rem 1rem;
+      border-radius: 10px;
+      border: 0;
+      background: #191414;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    .episode:hover {
+      background: #1Db954;
+		}
 	</style>
 </head>
 
@@ -89,10 +108,11 @@
 		<ul class="topnav">
 			<li><a href="#Songs">Favorite Songs</a></li>
 			<li><a href="#Artists">Favorite Artists</a></li>
-			<li><a href="#Links">Links</li>
+			<li><a href="#Links">Links</a></li>
 		</ul>
 	</div>
 
+	<div class="flex-container">
 	<div id="Songs">
 		<h2>Favorite Songs (at the moment)</h2>
 			<ul>
@@ -118,23 +138,48 @@
 				<li>Bring Me The Horizon</li>
 			</ul>
 	</div>
+	</div>
 
-	<div>
+
 		<h2 id="Links">Links</h2>
+		<h3> Music Profiles </h3>
 		<ul>
 			<li><a href="https://open.spotify.com/user/iz8bodadfxn35338mrr5f1x76?si=21159a2d837442d3"> Spotify profile </a></li>
 			<li><a href="https://stats.fm/oobinoobi"> stats.fm profile</a></li>
 		</ul>
 		<h3> Select Playlists </h3>
-		<p>
-			<iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/1Kk57RRBEw2NSorXmTEmba?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-		</p>
-		<p>
-			<iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/0B4QRhZC4MvIZOFEZKxDIF?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-		</p>
-	</div>
+
+		<div class="episodes">
+			<button class="episode" data-spotify-id="spotify:playlist:1Kk57RRBEw2NSorXmTEmba"> Master Playlist </button>
+			<button class="episode" data-spotify-id="spotify:playlist:0B4QRhZC4MvIZOFEZKxDIF"> Current Main Playlist </button>
+			<button class="episode" data-spotify-id="spotify:playlist:7DeuQGNfVMmREXIKQQb6Ki"> Current Favorites </button>	
+		</div>
+
+
+		<div id="embed-iframe"></div>
+		<script src="https://open.spotify.com/embed/iframe-api/v1" async></script>
+
+
+<script type="text/javascript">
+    window.onSpotifyIframeApiReady = (IFrameAPI) => {
+      const element = document.getElementById('embed-iframe');
+      const options = {
+        width: '100%',
+        height: '300',
+        uri: 'spotify:playlist:1Kk57RRBEw2NSorXmTEmba'
+      };
+      const callback = (EmbedController) => {
+        document.querySelectorAll('.episode').forEach(
+          episode => {
+            episode.addEventListener('click', () => {
+              EmbedController.loadUri(episode.dataset.spotifyId)
+            });
+          })
+      };
+      IFrameAPI.createController(element, options, callback);
+    };
+</script>
 
 </body>
-
 
 </html>
